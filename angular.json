@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "C:/Users/msharma/Desktop/projects/shoppingcart/node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "C:/Users/msharma/Desktop/projects/shoppingcart/node_modules/font-awesome/css/font-awesome.min.css"
             ],
             "scripts": []
           },
