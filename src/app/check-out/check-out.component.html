@@ -1,5 +1,69 @@
-<div>
-    <h3 class="bg-info p-1 text-white">
-            Check out details Component
-    </h3>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col bg-danger text-white">
+        <a class="navbar-brand">My Store</a>
+        </div>
+        </div>
+        </div>
+
+  <div *ngIf="orderSent" class="m-2 text-center">
+      <h2>Thanks for ordering!</h2>
+      <p>Visit Back</p>
+      <button class="btn btn-primary" routerLink="/store">Go Back
+    </button>
+  </div>
+
+  <form *ngIf="!orderSent" #form="ngForm"
+  novalidate (ngSubmit)="SubmitOrder(form)" class="m-2">
+ 
+   <div class="form-group">
+      <label>Name</label>
+      <input class="form-control" #name="ngModel" name="name"
+      [(ngModel)]="order.name" required/>
+      <span *ngIf="submitted && name.invalid" class="text-danger">
+        Please Enter Valid name
+    </span>  
+
+  </div>
+  <div class="form-group">
+    <label>Address</label>
+    <input class="form-control" #address="ngModel" name="address"
+    [(ngModel)]="order.address" required/>
+    <span *ngIf="submitted && address.invalid"
+    class="text-danger">
+        Please Enter Valid Address
+    </span>  
 </div>
+<div class="form-group">
+    <label>city</label>
+    <input class="form-control" #city="ngModel" name="city"
+    [(ngModel)]="order.city" required/>
+    <span *ngIf="submitted && city.invalid" class="text-danger">
+        Please Enter Valid City
+    </span>  
+</div>
+<div class="form-group">
+    <label>state</label>
+    <input class="form-control" #state="ngModel" name="state"
+    [(ngModel)]="order.state" required/>
+    </div>
+
+    <div class="form-group">
+        <label>zip</label>
+        <input class="form-control" #zip="ngModel" name="zip"
+        [(ngModel)]="order.zip" required />
+    </div>
+     <div class="form-group">
+        <label>country</label>
+        <input class="form-control" #country="ngModel" name="country"
+        [(ngModel)]="order.country" required/>
+        </div>
+
+     <div class="text-center">
+            <button class="btn btn-primary m-1" routerLink="/cart">Back</button>
+
+
+         <button class="btn btn-primary m-1" type="submit">Complete Order</button>
+     </div>   
+</form>    
+

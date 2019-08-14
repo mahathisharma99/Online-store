@@ -9,10 +9,11 @@ import { StoreComponent } from './store/store.component';
 import { StoreModule } from './store/store.module';
 import { CartSummaryComponent } from './cart-summary/cart-summary.component';
 import { CartDetailsComponent } from './cart-details/cart-details.component';
-import { CheckOutComponent } from './check-out/check-out.component';
+
 @NgModule({
   declarations: [
     AppComponent
+    
 
     
   ],
